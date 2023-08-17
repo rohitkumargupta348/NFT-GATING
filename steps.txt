@@ -1,0 +1,40 @@
+1.cd api
+
+2.npm init --y
+
+3.npm i axios cors web3 express nodemon socket.io
+
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "socket.io": "^4.7.1",
+    "web3": "^4.0.3"
+
+4.npm create vite@latest -> client -> React -> JS
+  cd client -> npm install -> npm run dev
+
+5. Download ngrok for windows
+   i.add the path till ngrok after extracting to environment variables
+   ii.open cmd and write following commands:
+      a.ngrok
+      b.copy link of  connect to your account from ngrok website
+      c.paste it in cmd
+      d.ngrok http PORT_NUMBER
+      e.copy the forward link and put it in to url link in destination.js
+  iii.node destination.js and copy yhe id to use it in notification.js
+
+  iv.convert to base64 and paste it in expression under notification.js
+// (tx_logs_topic1 =~ 'b8acfF0f109Ca526805A7DA85A955D6Ad1D4E1ea') //account address which we want to moniter && 
+// (tx_logs_address == '0xd4FB7aC6d80969c0b15331a4cb704f63f4734eC8') //contract address && 
+// (tx_logs_topic0 == '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef')
+
+  v.check notification.js - node notification.js
+
+6. Using Sockets - used to tranfer information from server to client because quicknode is interacting with client
+   cd client 
+   npm i socket.io-client
+
+  
+
+
